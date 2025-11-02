@@ -5,7 +5,7 @@ rm(list=ls())
 #a Open the timeseries data and print 15 observations
 install.packages("readxl")
 library(readxl)
-(data1<-read_excel("C:/Users/nomak/OneDrive/CERTIFICATES/ForecastData/timeseries.xlsx"))
+(data1<-read_excel("C:/ForecastData/timeseries.xlsx"))
 
 (data1<-data.frame(data1))
 attach(data1)
@@ -15,7 +15,7 @@ head(data1,15)
 library(tseries)
 
 library(forecast)
-tsdisplay(timeseries)
+tsdisplay(load_forecast)
 
 
 #Considering the time series plot, the series appears to be stationary.
